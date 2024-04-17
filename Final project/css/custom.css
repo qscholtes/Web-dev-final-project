@@ -1,0 +1,656 @@
+* {
+    box-sizing: border-box
+}
+
+body {
+    font-family: "Lato",sans-serif,Helvetica
+}
+hr.divider{
+    width: 150px;
+    margin: auto;
+    height: 5px;
+    background-color: #000000;
+    border: none;
+    margin-bottom: 35px;
+    opacity: 90%;
+    margin-top: 15px;
+
+}
+img {
+    max-width: 100%;
+    height: auto;
+}
+p{
+    font-family: "Lato",sans-serif,Helvetica
+}
+/* Doctors without Borders text and banner related styling */
+.DWB {
+    display: flex;
+    color: red;
+    width: auto;
+    justify-content: center;
+    margin-bottom: 20px;
+    align-content: center;
+    font-size: 8vw;
+    -webkit-text-stroke: 1px;
+    -webkit-text-stroke-color: rgba(255, 255, 255, 0.699);
+    padding-top: 45px;
+    text-shadow: 3px 3px 4px red;
+    font-family: "Lato",sans-serif;
+
+}
+
+.bannerContainer {
+    display: flex;
+}
+
+.bannerText {
+    position: absolute;
+    font-size: 2vw;
+    color: white;
+    display: flex;
+    align-self: flex-end;
+    -webkit-text-stroke: 1px;
+    -webkit-text-stroke-color: rgba(255, 255, 255, 0.699);
+    background-color: rgba(0, 0, 0, 0.447);
+
+}
+h2.mission{
+    justify-content: center;
+    text-shadow: 1px 1px 2px red;
+}
+/* Gradient styling for background of the whole page */
+#grad {
+    /* Dynamic height so the gradient is always covering the whole page */
+    height: auto;
+    /* Dynamic width so the gradient ia always covering the whole width */
+    width: auto;
+    /* Set the background gradient to always spawn the whole height */
+    min-height: 100vh;
+    /* Set the background gradient to always span the width of the viewport */
+    min-width: 100vh;
+    margin-top: -25px;
+    /* these background color values were obtained from the tool I used and referred to in my resources in the report */
+    background: rgba(245, 245, 245, 1);
+    background: -moz-linear-gradient(left, rgba(245, 245, 245, 1) 0%, rgba(245, 245, 245, 1) 29%, rgba(245, 245, 245, 1) 75%, rgba(231, 56, 39, 1) 100%);
+    background: -webkit-gradient(left top, right top, color-stop(0%, rgba(245, 245, 245, 1)), color-stop(29%, rgba(245, 245, 245, 1)), color-stop(75%, rgba(245, 245, 245, 1)), color-stop(100%, rgba(231, 56, 39, 1)));
+    background: -webkit-linear-gradient(left, rgba(245, 245, 245, 1) 0%, rgba(245, 245, 245, 1) 29%, rgba(245, 245, 245, 1) 75%, rgba(231, 56, 39, 1) 100%);
+    background: -o-linear-gradient(left, rgba(245, 245, 245, 1) 0%, rgba(245, 245, 245, 1) 29%, rgba(245, 245, 245, 1) 75%, rgba(231, 56, 39, 1) 100%);
+    background: -ms-linear-gradient(left, rgba(245, 245, 245, 1) 0%, rgba(245, 245, 245, 1) 29%, rgba(245, 245, 245, 1) 75%, rgba(231, 56, 39, 1) 100%);
+    background: linear-gradient(to right, rgba(245, 245, 245, 1) 0%, rgba(245, 245, 245, 1) 29%, rgba(245, 245, 245, 1) 75%, rgba(231, 56, 39, 1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f5f5f5', endColorstr='#e73827', GradientType=1);
+}
+
+/* Navigation bar related styling */
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 999;
+    background-color: red;
+}
+
+.navContainer {
+    width: auto;
+    display: flex;
+    background: red;
+    justify-content: space-between;
+    align-items: center;
+    height: 35px;
+}
+
+ul {
+    list-style: none;
+}
+
+.logo {
+    height: 20px;
+    display: flex;
+}
+
+.navlinks {
+    display: flex;
+    width: 400px;
+    flex-direction: row;
+    /* Set the nav hyperlink buttons always to the right */
+    justify-content: flex-end;
+    padding-right: 5px;
+}
+
+.navList {
+    height: 35px;
+    margin-top: 15px;
+    background-color: red;
+    border-radius: 5px;
+    width: auto;
+    padding-left: 5px;
+}
+
+.navlinks ul {
+    display: flex;
+    width: 450px;
+    /* space the navigation buttons between the container */
+    justify-content: space-between;
+
+}
+
+.navlinks ul li {
+    display: flex;
+    font-size: 14px;
+    align-items: flex-end;
+}
+
+/* Adjust the visual of the hyperlinks in the nav bar to get rid of the underline and blue color */
+.navlinks ul li a {
+    color: white;
+    text-decoration: none;
+
+}
+
+/* Font size change on hover to give some responsive feeling to the website */
+.navlinks ul li a:hover {
+    font-size: 16px;
+    border-radius: 5px;
+    height: 35px;
+}
+
+/* Settings for small viewport  */
+@media screen and (max-width: 768px) {
+    .navlinks ul li {
+        font-size: 12px;
+        /* Decrease font size */
+        margin-right: 1px;
+        justify-content: flex-start;
+        /* Decrease margin between items */
+        flex-shrink: 2;
+
+    }
+
+    p#projectintro{
+        text-decoration: none !important;
+        font-size: 24px !important;
+        width: 300px;
+        padding-bottom: 50px;
+        
+    }
+    .aboutinfo{
+        width: 370px !important;
+    }
+    .navlinks ul {
+        justify-content: space-evenly;
+    }
+
+
+    .aboutvideo {
+        width: 150px;
+        height: 300px;
+    }
+
+    #carouselExample {
+        display: none
+    }
+
+    #form {
+        width: 200px;
+        margin-left: 100px;
+
+    }
+
+    .DWB {
+        justify-content: flex-start;
+        align-content: center;
+        margin-left: 25px;
+        margin-top: 10px;
+
+    }
+
+    .projectsContainer,
+    .aboutContainer {
+        flex-direction: column;
+        align-content: flex-start;
+        align-items: baseline;
+        align-self: baseline;
+    }
+
+    #aboutusmoreContainer {
+        /* Set container back to normal flow to adjust for smaller width */
+        flex-direction: column;
+        /* Center the items in the viewport */
+        align-items: center;
+        /* Align the items at the start of the container to keep them visible */
+        align-content: center;
+        gap: 10px;
+        margin-right: 300px !important;
+    }
+
+    #MSFend {
+        width: 40% !important;
+    }
+
+    .contentContainer,
+    .aboutContainer,
+    .aboutusmoreContainer {
+        /* Set container back to normal flow to adjust for smaller width */
+        flex-direction: column;
+        /* Center the items in the viewport */
+        align-items: baseline;
+        /* Align the items at the start of the container to keep them visible */
+        align-content: flex-start;
+        gap: 10px;
+        align-self: baseline;
+        margin-left: 100px;
+    }
+
+    /* reduce size of the embedded youtube videos */
+    .ratio-16x9 {
+        width: 500px;
+    }
+
+    .aboutinfo {
+        width: 50%;
+    }
+
+    #form {
+        /* center form on low viewport */
+        margin-left: 200px;
+    }
+
+    .content {
+        /* Make all the statistics visible on low viewport by moving them to the left */
+        justify-content: flex-start !important;
+    }
+
+    .involvedContainer {
+        flex-direction: column;
+        margin: 80px !important;
+        gap: 20px;
+    }
+
+    .involveditem:nth-child(3n) {
+        width: 50% !important;
+    }
+
+    #morecontactSub {
+        width: 50%;
+        margin-left: 80px;
+    }
+
+    #fullscreen {
+        display: none !important;
+        background-color: black;
+    }
+
+    #stats {
+        width: 550px;
+    }
+    .homepageheader,
+    h2.mission,
+    hr.divider{
+        justify-content: left;
+        margin-left: 130px;
+        font-size: 20px;
+    }
+    hr.divider{
+        margin-top: 60px;
+        
+    }
+}
+
+.ratio-16x9 {
+    margin: 20px;
+}
+
+/* Footer related styling options */
+.footerContainer {
+    width: auto;
+    display: flex;
+    background: grey;
+    justify-content: space-between;
+    align-items: center;
+    height: auto;
+    flex-grow: 1;
+}
+
+footer {
+    /* Sets footer to always be present on the bottom */
+    position: fixed;
+    bottom: 0;
+    /* Sets footer to always be the full width of the viewport */
+    width: 100%;
+    background-color: grey;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    height: 25px;
+}
+
+.footerContainer a {
+    /* Footer text color */
+    color: white;
+}
+
+.footerContainer .socials {
+    display: flex;
+    padding-right: 5px;
+    padding-top: 0px;
+    width: 65px;
+    justify-content: space-between;
+}
+
+.footerContainer .socials a {
+    display: flex;
+}
+
+.footerContainer p {
+    padding-top: 5px;
+    font-size: 12px;
+    height: 9px;
+}
+
+/* Home page styling */
+.mission {
+    font-size: 48px;
+    margin-top: 0px;
+    margin-left: 20px;
+    display: flex;
+    font-weight: 600;
+
+}
+
+.missionContainer {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 20px;
+    width: 65%;
+    padding: auto;
+}
+
+.missionStatement {
+    display: flex;
+    width: 200px;
+    margin-left: 20px;
+    border: 2px;
+    border-color: grey;
+    border-style: groove;
+    font-style: italic;
+    color: rgb(0, 0, 0);
+    padding: 4px;
+    height: 300px;
+    background-color: rgb(235, 227, 227);
+    border-radius: 10px;
+    box-shadow: 10px 10px 5px 5px rgba(255, 255, 255, 0.779);
+}
+
+.environment {
+    display: flex;
+    height: 200px;
+    width: 200px;
+    margin-left: 30px;
+    box-shadow: 10px 10px 5px 5px rgba(255, 255, 255, 0.779);
+}
+
+p.statistics {
+    display: flex;
+    width: 180px;
+    border: 2px;
+    border-color: grey;
+    border-style: groove;
+    color: black;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-around;
+    padding-left: 5px;
+    background-color: rgb(235, 227, 227);
+    box-shadow: 10px 10px 5px 5px rgba(255, 255, 255, 0.779);
+}
+
+p.statistics strong {
+    display: flex;
+    font-size: 18px;
+}
+
+.statistics {
+    border-radius: 10px;
+}
+
+body {
+    height: 100vh;
+}
+
+.content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    background-color: rgba(231, 55, 39, 0.936);
+    padding-top: 50px;
+    box-shadow: 0px -15px 10px rgba(231, 56, 39, 1);
+}
+
+.contentContainer {
+    display: flex;
+    /*  Project page related styling */
+}
+
+p#projectintro {
+    font-size: 30px;
+    margin-left: 50px;
+    height: 50px;
+    text-decoration: underline;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.projectsContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.aboutvideo {
+    display: flex;
+    margin-right: 5px;
+    margin-left: 10px;
+    width: auto;
+}
+
+.aboutContainer {
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    flex-wrap: wrap;
+}
+
+.aboutinfo {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 15px;
+    background-color: rgba(245, 149, 149, 0.541);
+    margin: 20px;
+    border-radius: 10px;
+}
+
+p#westafrica {
+    width: 400px;
+    min-width: 200px;
+    margin-left: 20px;
+    padding-top: 20px;
+    display: flex;
+    background-color: rgba(245, 149, 149, 0.541);
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    height: 220px;
+    margin-top: 100px;
+    padding: 15px;
+}
+
+p#haiti {
+    margin-left: 25px;
+    padding: 0 15px;
+    max-width: 100%;
+    width: 400px;
+}
+
+#ebola {
+    display: flex;
+    padding: 25px;
+    max-width: 60%;
+    max-height: 60%;
+}
+
+/* Involved web page styling */
+.involvedContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 10px;
+
+}
+
+.involveditem {
+    width: 48%;
+    height: 100px;
+    margin-bottom: 2%;
+    padding-left: 5px;
+    background-color: rgba(245, 149, 149, 0.541);
+    display: flex;
+    padding: 10px;
+    /* Round the edges to make the page not so blocky */
+    border-radius: 10px;
+}
+
+.involveditem:nth-child(3n) {
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    height: 300px;
+}
+
+/* Javascript scroll progress bar styling */
+#progressbar {
+    border-bottom: 5px solid rgb(0, 0, 0);
+    width: 0px;
+    position: fixed;
+    top: 35px;
+    left: 0;
+}
+
+/* Contact page related styling */
+#form {
+    justify-items: start;
+    justify-content: space-evenly;
+    display: grid;
+}
+
+.contactHeaders {
+    font-size: 25px;
+    font-weight: bold;
+    margin-left: 10px;
+}
+
+#fullscreen {
+    padding-right: 10px;
+    background-color: red;
+    display: flex;
+    padding-left: 10px;
+    align-items: center;
+    gap: 10px;
+
+}
+
+#aboutusmoreContainer {
+    display: flex;
+    width: auto;
+    margin-left: 50px;
+    padding-bottom: 50px;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    gap: 20px;
+
+}
+
+#MSFstart {
+    width: 300px;
+    background-color: rgba(245, 149, 149, 0.541);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+#MSFend {
+    width: 500px;
+    padding-top: 20px;
+    background-color: rgba(245, 149, 149, 0.541);
+    padding: 20px;
+    border-radius: 10px;
+
+}
+
+#morecontact {
+    display: grid;
+    margin-left: 5%;
+    padding: 2%;
+    background-color: rgba(245, 149, 149, 0.541);
+
+}
+
+#morecontenttwo {
+    display: grid;
+    margin-left: 5%;
+    padding: 2%;
+    background-color: rgba(245, 149, 149, 0.541);
+}
+
+#morecontentthree {
+    display: grid;
+    margin-left: 5%;
+    padding: 2%;
+    background-color: rgba(245, 149, 149, 0.541);
+}
+
+#morecontact,
+#morecontenttwo,
+#morecontentthree {
+    border-radius: 10px;
+}
+
+#stats {
+    text-decoration: underline;
+    padding: 20px;
+
+}
+
+.contactimg {
+    /* Circular cutout to the image to remove the square effect */
+    border-radius: 50%;
+    max-width: 40%;
+    max-height: 40%;
+    margin-left: 100px;
+    margin-top: 50px;
+}
+
+#imglinks {
+    display: flex;
+    justify-content: space-between;
+    padding: 5%;
+    font-style: italic;
+}
+
+/* Report styling */
+div .report {
+    margin: auto;
+    width: 75%;
+    border: 30px;
+    padding: 10px;
+
+
+}
